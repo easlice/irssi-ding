@@ -1,4 +1,4 @@
-You can find this project online at:
+You can find this project online at: https://bitbucket.org/easlice/irssi-ding
 
 This script will play a sound whenever you receive a message. It does this via aplay or mpg123, depending on the file extension, and you can load up sounds for several kinds of messages. By default it only plays messages with level PUBLIC or PRIVATE, all others are ignored. It also ignores any messages you send yourself.
 
@@ -29,7 +29,9 @@ to the script:
 SETTINGS
 ========
 
+```
 ding                   -> Whether to do play any sounds. Defaults to ON.
 ding_sound             -> The sound played when you receive a message that isn't private or hilighted.
 ding_sound_hilight     -> The sound played when you receive a hilighted message.
 ding_sound_private_msg -> The sound played when you receive a private message.
+```

@@ -18,7 +18,7 @@ $VERSION = "0.1";
     name        => 'ding.pl',
     description => 'Play a given sound when messages come in.',
     license     => 'MIT',
-    url         => '',
+    url         => 'https://bitbucket.org/easlice/irssi-ding',
 );
 
 Irssi::settings_add_bool('ding', 'ding', 1);
