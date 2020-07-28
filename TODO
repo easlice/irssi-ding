@@ -1,0 +1,10 @@
+(Nothing here is guaranteed or even being worked on)
+
+- Message filtering (to not ding on certain kinds of messages)
+- Separate listener and dinger for remote ssh connections (similar to irssi-libnotify)?
+- Fill out more supported file extensions.
+- Allow custom filters to use custom sounds?
+- Volume control?
+- Rate limiter?
+- Sounds defined per server?
+- Sounds for individual nicks?
