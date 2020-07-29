@@ -1,5 +1,3 @@
-#!/usr/bin/perl
-
 # Put me in ~/.irssi/scripts, and then execute the following in irssi:
 #       /script load ding
 #
@@ -41,6 +39,7 @@ sub print_text_ding {
     my $sender = $stripped;
     $sender =~ s/^\<.([^\>]+)\>.+/\1/ ;
     return if (!($dest->{level} & MSGLEVEL_PUBLIC) || ($sender eq $server->{nick}));
+
     if ($dest->{level} & MSGLEVEL_HILIGHT) {
         ding(Irssi::settings_get_str("ding_sound_hilight"));
     } else {
@@ -53,13 +52,14 @@ sub message_private_ding {
 
     return if not Irssi::settings_get_bool("ding");
 
-    return if (!$server);
     ding(Irssi::settings_get_str("ding_sound_private_msg"));
 }
 
 sub ding {
     my ($sound) = @_;
+
     return if !$sound;
+
     if (substr($sound, -3) =~ /mp3/i) {
         system("mpg123 -q $sound &");
     } elsif (substr($sound, -3) =~ /wav/i) {
